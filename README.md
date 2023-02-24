@@ -1,4 +1,4 @@
-# pluscloud open: technical documentation repo
+# plusserver xaas: technical documentation repo
 
 [Plusserver XaaS](https://www.plusserver.com/produkte/database-as-a-service) are services by [plusserver](https://plusserver.com). The technical documentation is published [here](https://docs.xaas.get-cloud.io).
 
