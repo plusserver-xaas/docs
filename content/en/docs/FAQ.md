@@ -1,7 +1,7 @@
 ---
 title: "Frequently asked Questions"
 linkTitle: "FAQ"
-weight: 100
+weight: 8
 description: >-
      Page description for heading and indexes.
 ---
