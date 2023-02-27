@@ -1,4 +1,4 @@
-module github.com/pluscloudopen/docs
+module github.com/plusserver-xaas/docs
 
 go 1.19
 
