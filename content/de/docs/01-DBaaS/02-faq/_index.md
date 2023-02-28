@@ -9,17 +9,17 @@ description: >
 
 ## Generelle Fragen
 #### Was sind DBaaS?
-{{< alert }}
+{{< alert >}}
 
 {{< /alert >}}
 #### Was sind die unterstützten DBMS?
-{{< alert }}
+{{< alert >}}
 * MariaDB
 * MySQL
 * PostgreSQL
 {{< /alert >}}
 #### Kann ich DBaaS mit anderen Plusserver-Produkten verbinden?
-{{< alert }}
+{{< alert >}}
 Ja, sofern die Produkte über ein öffentliches Netzwerk erreichen können.
 {{< /alert >}}
 #### Was ist eine Major- und eine Minorversion?
