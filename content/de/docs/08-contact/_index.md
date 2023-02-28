@@ -1,7 +1,7 @@
 ---
 title: "Kontakt"
 linkTitle: "Kontakt"
-weight: 2
+weight: 8
 date: 2023-02-21
 description: >
   See your project in action!
