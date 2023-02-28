@@ -12,9 +12,9 @@ description: >
 Database as a Service (DBaaS) sind vollständig verwaltete, leistungsstarke Datenbank-Dienste auf Basis der Opensource Datenbanken Mariadb, MySQL oder PostgresSQL. Die Verwendung von voll verwalteten Datenbanken ist eine einfache Alternative zur manuellen Installation, Konfiguration, Wartung und Sicherung von Datenbanken. DBaaS umfasst Monitoring, Entstörung sowie tägliche Backups. DBaaS sind skalierbar und kann so an sich ändernde Leistungsanforderungen angepasst werden. Dazu können die Instanzgrößen (Ram- und CPU Ressourcen) jederzeit angepasst werden, und zwar zu leistungsfähigerer Instanzgrößen, um Performanceengpässe zu überbrücken aber auch in die Gegenrichtung. Der Datenspeicher kann jederzeit in festen 50GB Schritten erhöht werden. Der Zugriff auf die Daten wird durch die Festlegung auf feste, für den Zugriff auf die Datenbank erlaubte IPs und TLS Verschlüsselten Datentransfer abgesichert. Sollte es zu Fehlern kommen kann jederzeit ein Backupstand bereitgestellt werden. Dazu wird ein neuer DBaaS mit den Backupdaten bereitgestellt. Dieser Mechanismus kann auch genutzt werden, um zusätzlich Datenbanken für Test und Entwicklung bereitzustellen.
 
 ### Was sind die unterstützten DBMS?
-**MariaDB**
-**MySQL**
-**PostgreSQL**
+* **MariaDB**
+* **MySQL**
+* **PostgreSQL**
 
 ### Kann ich DBaaS mit anderen Plusserver-Produkten verbinden?
 Ja, sofern die Produkte über ein öffentliches Netzwerk erreichen können.
@@ -53,15 +53,15 @@ https://customerservice.plusserver.com/billing/invoices
 
 ### Gibt es Limitierungen
 * Defaultdatenbank und Superuser können nicht verändert oder gelöscht werden
-** Das Superuserrecht verbleibt bei PlusServer
-** Die Rechte werden von PlusServer für Backup und Monitoring benötigt
+  * Das Superuserrecht verbleibt bei PlusServer
+  * Die Rechte werden von PlusServer für Backup und Monitoring benötigt
 * Erreichbarkeit der Datenbank ausschließlich über eine Public IP (IPv4)
-** keine VPN Tunnel möglich
-** keine direkte Verbindung zu anderen Produkten
+  * keine VPN Tunnel möglich
+  * keine direkte Verbindung zu anderen Produkten
 * Der Zugriff auf den Service ist nur von explizit freigegebenen IPs / IP-Netzen möglich (IP Whitelisting)
-** Freizugebende IPs / IP-Netze müssen über Plusserver eingerichtet werden
-** Es dürfen keine Any-Freigaben (Zugriff von 0.0.0.0) erfolgen
-** Freigaben von IP-Netzen dürfen nur im Bereich /24 - /32 (für IPv4) liegen
+  * Freizugebende IPs / IP-Netze müssen über Plusserver eingerichtet werden
+  * Es dürfen keine Any-Freigaben (Zugriff von 0.0.0.0) erfolgen
+  * Freigaben von IP-Netzen dürfen nur im Bereich /24 - /32 (für IPv4) liegen
 * Die Datenfestplatte kann nur vergrößert werden. Für eine Verkleinerung der Datenplatte muss ein neuer DBaaS gebucht werden und die Daten müssen exportiert/importiert werden 
 
 ### Wann beginnt und endet die Abrechnung?
