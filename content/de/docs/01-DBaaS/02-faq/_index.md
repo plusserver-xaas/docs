@@ -36,7 +36,7 @@ Comming soon
 Pay as you go
 
 ### Wo kann ich meine Rechnungen finden?
-Ihre Rechnung finde Sie im Kundenportal unter ***Verträge und Abrechnungen*** / *** Rechnungen ***
+Ihre Rechnung finde Sie im Kundenportal unter ***Verträge und Abrechnungen*** / ***Rechnungen***
 https://customerservice.plusserver.com/billing/invoices
 
 ### Was ist in den Preisen enthalten?
