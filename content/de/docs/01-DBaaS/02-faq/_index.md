@@ -1,10 +1,8 @@
 ---
 title: "FAQ"
 linkTitle: "FAQ"
-weight: 2
+weight: 10
 date: 2023-02-21
-description: >
-  See your project in action!
 ---
 
 ## Generelle Fragen
