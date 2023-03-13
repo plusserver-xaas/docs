@@ -1,40 +1,32 @@
 ---
-title: "Anlegen neuer Datenbanken und User"
-linkTitle: "Anlegen neuer Datenbanken und User"
+title: "Anlegen neuer Datenbanken und Benutzer"
+linkTitle: "Anlegen neuer Datenbanken und Benutzer"
 weight: 2
-date: 2023-02-21
+date: 2023-03-13
 ---
 
+In diesem Abschnitt erstellen wir eine neue Datenbank mit dem Namen '''newdb''' und einen Benutzer mit dem Namen '''newuser''' und gewähren dem entfernten System Zugriff auf die Datenbank newdb mit dem Benutzer newuser.
 
-Grant Access to a User from a Remote System
-In this section, we will create a new database named newdb and a user named newuser, and grant access to the remote system to connect to the database newdb as user newuser.
+Melden Sie sich zunächst mit dem folgenden Befehl an der MariaDB-Shell an: ``$ mysql -u admin -p``
 
-First, log in to the MariaDB shell with the following command:
-``$ mysql -u admin -p``
+Geben Sie Ihr Admin Passwort ein, wie im Kundenportal angezeigt, und erstellen Sie nach der Aufforderung eine Datenbank und einen Benutzer mit dem folgenden Befehl: 
+``MariaDB [(none)]> CREATE DATABASE newdb; MariaDB [(none)]> CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';``
 
-Provide your admin (root) password as shown in the Webdock backend and when you get the prompt create a database and user with the following command:
-``MariaDB [(none)]> CREATE DATABASE newdb;
-MariaDB [(none)]> CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';``
+Als nächstes müssen Sie dem entfernten System mit der IP-Adresse '''62.138.222.4''' die Berechtigung erteilen, sich mit der Datenbank newdb als Benutzer newuser zu verbinden. Dies können Sie mit dem folgenden Befehl tun:
 
-Next, you will need to grant permissions to the remote system with IP address 62.138.222.4 to connect to the database named newdb as user newuser. You can do it with the following command:
+``MariaDB [(none)]> GRANT ALL ON newdb.* to 'newuser'@'62.138.222.4' IDENTIFIED BY 'password' WITH GRANT OPTION;``
 
-MariaDB [(none)]> GRANT ALL ON newdb.* to 'newuser'@'62.138.222.4' IDENTIFIED BY 'password' WITH GRANT OPTION;
+Anschließend löschen Sie die Berechtigungen und verlassen die MariaDB-Shell mit dem folgenden Befehl: 
+``MariaDB [(none)]> FLUSH PRIVILEGES; MariaDB [(none)]> EXIT;``
 
-Next, flush the privileges and exit from the MariaDB shell with the following command:
-``MariaDB [(none)]> FLUSH PRIVILEGES;
-MariaDB [(none)]> EXIT;``
+Im Folgenden werden die einzelnen Parameter kurz erläutert:
 
-A brief explanation of each parameter is shown below:
-* newdb: It is the name of the MariaDB database that the user wants to connect to.
-* newuser: It is the name of the MariaDB database user.
-* 62.138.222.4: It is the IP address of the remote system from which the user wants to connect.
-* password: It is the password of the database user.
+'''newdb''': Dies ist der Name der MariaDB-Datenbank, mit der sich der Benutzer verbinden möchte.
+'''newuser''': Dies ist der Name des MariaDB-Datenbankbenutzers.
+'''62.138.222.4''': Es handelt sich um die IP-Adresse des entfernten Systems, von dem aus der Benutzer eine Verbindung herstellen möchte.
+'''password''': Dies ist das Passwort des Datenbankbenutzers.
+Wenn Sie newuser Fernzugriff auf alle Datenbanken gewähren wollen, führen Sie den folgenden Befehl aus: ``MariaDB [(none)]> GRANT ALL ON *.* to 'newuser'@'62.138.222.4' IDENTIFIED BY 'password' WITH GRANT OPTION;``
 
-If you want to grant remote access on all databases for newuser, run the following command:
-``MariaDB [(none)]> GRANT ALL ON *.* to 'newuser'@'62.138.222.4' IDENTIFIED BY 'password' WITH GRANT OPTION;``
+Wenn Sie als newuser Zugriff auf alle entfernten IP-Adressen auf newdb gewähren wollen, verwenden Sie ``%`` anstelle der IP-Adresse (208.117.84.50) wie unten gezeigt: ``MariaDB [(none)]> GRANT ALL ON newdb.* to 'newuser'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;``
 
-If you want to grant access to all remote IP addresses on newdb as newuser, use % instead of IP address (208.117.84.50) as shown below:
-``MariaDB [(none)]> GRANT ALL ON newdb.* to 'newuser'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;``
-
-If you want to grant access to all IP addresses in the subnet 62.138.222.0/24 on newdb as user newuser, run the following command:
-``MariaDB [(none)]> GRANT ALL ON newdb.* to 'newuser'@'62.138.222.%' IDENTIFIED BY 'password' WITH GRANT OPTION;``
+Wenn Sie auf newdb als Benutzer newuser Zugriff auf alle IP-Adressen im Subnetz '''62.138.222.0/24''' gewähren wollen, führen Sie folgenden Befehl aus: ``MariaDB [(none)]> GRANT ALL ON newdb.* to 'newuser'@'62.138.222.%' IDENTIFIED BY 'password' WITH GRANT OPTION;``
