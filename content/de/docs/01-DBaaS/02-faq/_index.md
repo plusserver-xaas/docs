@@ -22,6 +22,48 @@ Ja, sofern die Produkte über ein öffentliches Netzwerk erreichen können.
 ### Was ist eine Major- und eine Minorversion?
 Jede Software, auch Datenbanksoftware, bietet neuere Versionen ihres Codes an, die in der Regel Fehlerkorrekturen, Sicherheitsverbesserungen und Verbesserungen enthalten. Im Allgemeinen umfasst ein Minor-Versions-Upgrade nur Änderungen, die mit bestehenden Anwendungen abwärtskompatibel sind. Im Gegensatz dazu kann eine Majorversion Inkompatibilitäten mit sich bringen.
 
+### Was sind Regionen und Availability Zones (AZ)? {#Regions}
+
+PlusServer bietet mehrere Regionen und Verfügbarkeitszonen (AZs), um Kunden Hochverfügbarkeit und Disaster-Recovery-Optionen zu bieten. Jede AZ besteht aus einem oder mehreren Rechenzentren, die so konzipiert sind, dass sie unabhängig voneinander sind und im Falle von Ausfällen oder Katastrophen Redundanz bieten. Kunden können wählen, ob sie ihre Ressourcen in einer oder mehreren AZs für Hochverfügbarkeit und Disaster Recovery einsetzen wollen.
+
+#### Was ist eine Region
+Eine Region ist ein geografisches Gebiet, das aus mehreren isolierten und räumlich getrennten, also redundanten AZs besteht.
+
+##### Anforderungen
+
+* Besteht aus mehreren isolierten und räumlich getrennten AZ innerhalb eines geografischen Gebiets.
+* Die Entfernung zwischen den Regionen beträgt >=300 km.
+
+##### Beispiel
+
+* DE-WEST
+
+#### Was ist eine Availability Zone (AZ)?
+
+Eine Verfügbarkeitszone (AZ) ist ein Standort innerhalb einer Region, der aus einem oder mehreren Rechenzentren besteht, die so konzipiert sind, dass sie voneinander unabhängig sind und im Falle von Ausfällen oder Katastrophen Redundanz bieten. Kunden können ihre Ressourcen in einer oder mehreren AZs für Hochverfügbarkeit und Disaster Recovery bereitstellen.
+
+##### Anforderungen
+
+* Liegt innerhalb einer Region und besteht aus einem oder mehreren Rechenzentren mit mindestens einer gemeinsamen Strom-, Netzwerk- und Kühlungsversorgung.
+* Ein AZ ist immer unabhängig von einem anderen (insbesondere in den Bereichen Strom [Einspeisung, Verteilung, USV, Notstrom], Netzwerk [Einspeisung, Router, Switches], Kühlung und Gebäude).
+* Die Latenzzeit zwischen den AZs innerhalb derselben Region beträgt <=2ms.
+
+##### Beispiel
+
+* DE-NORTH-1
+* DE-WEST-2
+
+#### Plusserver Regionen und AZ Liste {#Regionlist}
+
+In der folgenden Tabelle sind die vom PlusServer angebotenen Regionen und AZs aufgeführt:
+
+| Region   | Availability Zone | Standort               |
+|----------|-------------------|------------------------|
+| DE-NORTH | DE-NORTH-1        | Hamburg, Deutschland   |
+|          | DE-NORTH-2        | Hamburg, Deutschland   |
+| DE-WEST  | DE-WEST-1         | Köln, Deutschland      |
+|          | DE-WEST-2         | Düsseldorf, Deutschland|
+
 ### Wie kann ich die DBMS-Version bei der Erstellung einer DB-Instanz auswählen?
 Aktuell bieten wir nur je eine Version je DBaaS. Wir planen weitere Versionen jeder DBaaS zur Auswahl zu stellen.
 
@@ -80,33 +122,36 @@ Die Infrastruktur ist vollständig redundant aufgebaut. Wir garantieren daher ei
 Aktuell gibt es keine Limitierung
 
 ### Wie fange ich an?
-TODO
+Wir haben für Sie eine [Schnellstartanleitung](https://docs.xaas.get-cloud.io/de/docs/01-dbaas/01-quickstart/) erstellt 
 
 ### Wie kann ich Daten in eine DB-Instanz importieren?
 Wir verwenden offizielle Versionen der DBMS, so dass Sie sich auf die offizielle Dokumentation für jedes DBMS verlassen können, um Daten in DBaaS zu importieren. Für PostgreSQL können Sie zum Beispiel pg_dump und pg_restore verwenden, für MySQL oder MariaDB mysqldump und mysqlimport.
 
 ## Skalierung
 ### Wie kann ich eine andere Nodegröße auswählen?
-TODO
+Cooming Soon
 
 ### Kann ich den Datenspeicher verkleinern?
 Nein, eine Reduzierung des genutzten Speichers ist nicht vorgesehen. Sie können hier mit Export/Import die Daten in einen neuen DBaaS umziehen um den Speicher wieder zu verringern.
 
 ### Wird meine DB-Instanz während der Skalierung verfügbar bleiben?
-TODO
+#### Nodesize
+Hier wird es eine kurze Unterbrechung geben, da die Node mit angepassten Ressourcen neu ausgerollt wird. 
+#### Speicherplatz
+Der Datenspeicher wir ohne Unterbrechnung erweitert
 
 ### Wie ist die Leistung der einzelnen Nodegrößen?
 Wir stellen bisher keine Benchmark-Ergebnisse für DBaaS zur Verfügung. Jeder geschäftliche Anwendungsfall ist anders, und die Benchmarks können sich stark von Ihren eigenen realen Anwendungsfällen unterscheiden. Beachten Sie jedoch, dass unsere Leistungsunterschiede linear sind.
 
 ### Wo werden meine DB-Instanzen bereitgestellt?
-TODO
+Das hängt von der Auswahl der Region ab, die Sie ausgewählt haben. Weiter Informationen finden sie hier [Plusserver Regionen und AZ Liste](#Regionlist)
 
 ### Bieten wir Multi-AZ-Bereitstellungen an?
-Bislang bieten wir keine Multi-AZ-Bereitstellungen an. 
+Bislang bieten wir keine Multi-AZ-Bereitstellungen an. Sie bekommen die DBaaS in jeweils einer Region bzw einem AZ bereitgestellt.
 
 ## Backups und Wartung
 ### Wie führen Sie Backups durch?
-TODO
+Ja, wir erstellen ein tägliches Backup der Daten
 
 ### Kann ich manuelle Backups durchführen?
 Wir verwenden offizielle Versionen von DBMS, so dass Sie sich auf die offizielle Dokumentation für jedes DBMS verlassen können, um Backups für Public Cloud-Datenbanken durchzuführen. Für PostgreSQL können Sie zum Beispiel pg_dump und pg_restore verwenden. Für MySQL können Sie mysqldump und mysqlimport verwenden.
@@ -115,26 +160,27 @@ Wir verwenden offizielle Versionen von DBMS, so dass Sie sich auf die offizielle
 Nein, Sie können die von Plusserver erstellten Backups nicht direkt herunterladen.
 
 ### Wo werden meine Backups gespeichert, und wie lange?
-TODO
+Die Backupdaten werden auf ein abgesichertes S3 Storage ausgelagert und dort 7 Tage vorgehalten
  
 ### Was ist ein Wartungsfenster? Wird meine DB-Instanz während der Wartungsarbeiten verfügbar sein?
-TODO
+Die Backups werden ab 22:00 erstellt. Wir erstellen die Backups auf Snapshotbasis. Die Datenbank bleibt daher grundsätzlich verfügbar, wird aber für einen kurzen Moment in einen konsistenten Zustand gebracht (Read only).
  
 ### Kann ich das Wartungsfenster ändern?
 Derzeit können Sie das Wartungsfenster nicht ändern
 
 ## Sicherheit
 ### Welche Sicherheitsmechanismen gibt es für meine Datenbankinstanz?
-TODO
+* Die Datenbank kann nur nach expliziter Freischaltung von berechtigten IPs oder IP-Bereichen genutzt werden. Wir empehlen dies so stark wie möglich einzugrenzen
+* Sie können ausschließlich SSL verschlüsselt mit der Datenbank verbinden  
 
 ### Wer kann anfangs auf meine Datenbankinstanz zugreifen?
-TODO
+Solange keine Freischaltungen vorgenommen wurden: Niemand
 
 ### Wie kann ich die Zugriffsrechte auf meine Datenbankinstanz verwalten?
-TODO
+Comming Soon
 
 ### Wie kann ich neue Benutzer für meine Datenbankinstanz hinzufügen?
-TODO
+Wir haben dazu einen kleinen Anleitungsartikel geschrieben: [Anlegen neuer Datenbanken und Benutzer](https://docs.xaas.get-cloud.io/de/docs/01-dbaas/03-howto/anlegen-neuer-datenbanken-und-user/)
 
 ### Sind meine Daten verschlüsselt?
 TODO
