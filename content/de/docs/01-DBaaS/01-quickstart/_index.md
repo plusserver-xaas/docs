@@ -34,15 +34,28 @@ Sie sind neuer Kunde bei Plusserver und bekommen noch keine Rechnung? Dann wähl
 ![Auswahl Rechnungsprofil](8-rechnungsprofil.png)
 ### Auslösen der Bestellung
 Prüfen Sie bitte über die Zusammenfassung Ihre eingegeben Daten. Lesen Sie bitte die Bestimmungen und Vereinbarungen und bestätigen diese. Erst danach können Sie ***jetzt kostenpflichtig bestellen*** klicken
-![Zusammenfassung der Bestellung](7-zusammenfassung.png)
+![Zusammenfassung der Bestellung](9-zusammenfassung.png)
 
-### Was jetzt
-TBD:
-* Bestellstatus verfolgen
-* Zugangsdaten einsehen
+### Bestellstatus verfolgen
+Direkt nach der Bestellung werden Sie auf [Bestellstatus](https://customerservice.plusserver.com/order-status) weitergeleitet. Sie können hier jederzeit den Status laufender Aufträge einsehen.
+
+* new: Status direkt nach dem Auftrag
+* processing: Status sobald die automatische bereitstellung angelaufen ist
+* failed: Es ist leider etwas schiefgegangen, bitte öffenen Sie in diesem fall ein [Ticket](https://customerservice.plusserver.com/support/ticket-create)
+* DONE: Herzlichen Glückwunsch, Ihr neuer Service steht zur Verfügung
+![Auftrag erfolgreich ausgeführt](10-Auftragsstatus_done.png)
+
+### Zugangsdaten einsehen
+Direkt nach der bestellung können sie vom Auftrag aus direkt zum Vertrag springen. Dort finden Sie die Zugangsdaten.
+Sie können die Zugangsdaten aber auch jederzeit über die [Verträge](https://customerservice.plusserver.com/billing/contracts) finden. Mehr Details finden Sie in dieser [Anleitung](https://docs.xaas.get-cloud.io/de/docs/01-dbaas/03-howto/zugangsdaten) 
+
+### Erste Schritte mit dem Service
+Schauen Sie hier bitte in unsere Anleitungsartikel
+* [Zur Datenbank verbinden](https://docs.xaas.get-cloud.io/de/docs/01-dbaas/03-howto/db-login)
+* [User und Passworte anlegen](https://docs.xaas.get-cloud.io/de/docs/01-dbaas/03-howto/anlegen-neuer-datenbanken-und-user)
 
 # Anpassung
-Comming Soon
+Feature kommt in Q2 2023
 
 # Kündigung
-Comming Soon
+Feature kommt im April 2023

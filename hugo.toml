@@ -76,9 +76,9 @@ weight = 1
 
 [markup]
 [markup.tableOfContents]
-    endLevel = 4
+    endLevel = 3
     ordered = false
-    startLevel = 1
+    startLevel = 2
 [markup.goldmark]
 [markup.goldmark.renderer]
 unsafe = true
