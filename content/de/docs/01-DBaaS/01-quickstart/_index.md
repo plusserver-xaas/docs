@@ -9,7 +9,7 @@ date: 2023-03-14
 Sie benötigen schnell eine Datenbank? Dann führen wir Sie hier durch die Bestellung:
 
 ### Kundenportal
-TBD: Einstieg: Link zum Kundenportal
+Sie starten immer in unserem [Kundenportal](https://customerservice.plusserver.com)
 
 ### Auswahl DBaaS
 Navigieren Sie zunächst zu ***Cloud Services / Datenbanken***
@@ -41,8 +41,8 @@ Direkt nach der Bestellung werden Sie auf [Bestellstatus](https://customerservic
 
 * new: Status direkt nach dem Auftrag
 * processing: Status sobald die automatische bereitstellung angelaufen ist
-* failed: Es ist leider etwas schiefgegangen, bitte öffenen Sie in diesem fall ein [Ticket](https://customerservice.plusserver.com/support/ticket-create)
-* DONE: Herzlichen Glückwunsch, Ihr neuer Service steht zur Verfügung
+* failed: Es ist leider etwas schiefgegangen, bitte öffnen Sie ein [Ticket](https://customerservice.plusserver.com/support/ticket-create)
+* DONE: Herzlichen Glückwunsch, Ihr neuer DBaaS steht zur Verfügung
 ![Auftrag erfolgreich ausgeführt](10-Auftragsstatus_done.png)
 
 ### Zugangsdaten einsehen
