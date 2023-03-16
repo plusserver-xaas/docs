@@ -95,8 +95,8 @@ guessSyntax = "true"
 
 # Comment out if you don't want the "print entire section" link enabled.
 [outputs]
-#section = ["HTML", "print", "RSS"]
-section = ["HTML", "RSS"]
+section = ["HTML", "print", "RSS"]
+#section = ["HTML", "RSS"]
 
 # https://gohugo.io/about/hugo-and-gdpr/
 [privacy]
@@ -238,7 +238,7 @@ proxy = "direct"
 # replacements = "github.com/google/docsy -> ../../docsy"
 [module.hugoVersion]
 extended = true
-min = "0.110.3"
+min = "0.111.3"
 [[module.imports]]
 path = "github.com/google/docsy"
 disable = false
