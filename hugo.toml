@@ -64,6 +64,9 @@ includeFields = ''
 title = "plusserver xaas"
 description = "The technical documentation for plusserver-xaas"
 languageName = "English"
+contentDir = "content/en"
+time_format_default = "02.01.2006"
+time_format_blog = "02.01.2006"
 # Weight used for sorting.
 [languages.de]
 title = "plusserver xaas: docs"
