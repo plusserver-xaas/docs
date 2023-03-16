@@ -70,9 +70,6 @@ Aktuell bieten wir nur je eine Version je DBaaS. Wir planen weitere Versionen je
 ### Kann ich eine neue Version vor dem Upgrade testen?
 Da wir aktuell nur eine Version zur Auswahl stellen gibt es keinen Möglichkeit zum Upgrade und zum Test des Upgradesc
 
-### Wo kann ich die Produkt-Roadmap finden?
-Comming soon
-
 ## Abrechnung
 ### Wie werden die Dienste abgerechnet?
 Pay as you go
@@ -176,29 +173,26 @@ Derzeit können Sie das Wartungsfenster nicht ändern
 ### Wer kann anfangs auf meine Datenbankinstanz zugreifen?
 Solange keine Freischaltungen vorgenommen wurden: Niemand
 
-### Wie kann ich die Zugriffsrechte auf meine Datenbankinstanz verwalten?
-Comming Soon
-
 ### Wie kann ich neue Benutzer für meine Datenbankinstanz hinzufügen?
 Wir haben dazu einen kleinen Anleitungsartikel geschrieben: [Anlegen neuer Datenbanken und Benutzer](https://docs.xaas.get-cloud.io/de/docs/01-dbaas/03-howto/anlegen-neuer-datenbanken-und-user/)
 
-### Sind meine Daten verschlüsselt?
-TODO
-
-### Zertifizierungen
-TODO
-
 ### Kann ich eine Verbindung zu meiner Datenbankinstanz über ein öffentliches Netzwerk herstellen?
-TODO
-
+Wir haben dazu einen kleinen Anleitungsartikel geschrieben: [Verbidnung zur Datenbank](https://docs.xaas.get-cloud.io/de/docs/01-dbaas/03-howto/db-login)
 
 ## Fehlersuche
-### Meine Abfragen sind langsam
-TODO
 
 ### Meine Daten sind beschädigt
 Wenn Ihre Daten beschädigt sind, haben Sie 2 Möglichkeiten:
 
 1. Wenn Ihre Daten wichtig sind, können Sie eine Sicherungskopie wiederherstellen, auf der Ihre Daten noch gültig sind. Für diesen Schritt müssen Sie selbst Nachforschungen anstellen.
 2. Wenn Ihre Daten gelöscht werden können, können Sie den Datenbankinstanzdienst löschen und einen neuen erstellen oder einfach der offiziellen DBMS-Dokumentation folgen, um alle Daten zu löschen.
+
+
+## Themenspeicher
+### Wo kann ich die Produkt-Roadmap finden?
+### Meine Abfragen sind langsam
+### Zertifizierungen
+### Sind meine Daten verschlüsselt?
+### Wie kann ich die Zugriffsrechte auf meine Datenbankinstanz verwalten?
+
 
