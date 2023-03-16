@@ -1,8 +1,6 @@
 ---
-title: "Anleitungen"
-linkTitle: "Anleitungen"
+title: "DBaaS"
+linkTitle: "DBaaS"
 weight: 2
-date: 2023-02-21
+date: 2023-03-16
 ---
-
-Hier finden Sie Anleitungen rund um den Basisbetrieb der DBaaS
