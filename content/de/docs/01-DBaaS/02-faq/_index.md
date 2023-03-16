@@ -5,8 +5,6 @@ weight: 10
 date: 2023-02-21
 ---
 
-{{< table_of_contents >}}
-
 ## Generelle Fragen
 ### Was sind DBaaS?
 Database as a Service (DBaaS) sind vollständig verwaltete, leistungsstarke Datenbank-Dienste auf Basis der Opensource Datenbanken Mariadb, MySQL oder PostgresSQL. Die Verwendung von voll verwalteten Datenbanken ist eine einfache Alternative zur manuellen Installation, Konfiguration, Wartung und Sicherung von Datenbanken. DBaaS umfasst Monitoring, Entstörung sowie tägliche Backups. DBaaS sind skalierbar und kann so an sich ändernde Leistungsanforderungen angepasst werden. Dazu können die Instanzgrößen (Ram- und CPU Ressourcen) jederzeit angepasst werden, und zwar zu leistungsfähigerer Instanzgrößen, um Performanceengpässe zu überbrücken aber auch in die Gegenrichtung. Der Datenspeicher kann jederzeit in festen 50GB Schritten erhöht werden. Der Zugriff auf die Daten wird durch die Festlegung auf feste, für den Zugriff auf die Datenbank erlaubte IPs und TLS Verschlüsselten Datentransfer abgesichert. Sollte es zu Fehlern kommen kann jederzeit ein Backupstand bereitgestellt werden. Dazu wird ein neuer DBaaS mit den Backupdaten bereitgestellt. Dieser Mechanismus kann auch genutzt werden, um zusätzlich Datenbanken für Test und Entwicklung bereitzustellen.
@@ -125,8 +123,6 @@ Wir haben für Sie eine [Schnellstartanleitung](https://docs.xaas.get-cloud.io/d
 Wir verwenden offizielle Versionen der DBMS, so dass Sie sich auf die offizielle Dokumentation für jedes DBMS verlassen können, um Daten in DBaaS zu importieren. Für PostgreSQL können Sie zum Beispiel pg_dump und pg_restore verwenden, für MySQL oder MariaDB mysqldump und mysqlimport.
 
 ## Skalierung
-### Wie kann ich eine andere Nodegröße auswählen?
-Cooming Soon
 
 ### Kann ich den Datenspeicher verkleinern?
 Nein, eine Reduzierung des genutzten Speichers ist nicht vorgesehen. Sie können hier mit Export/Import die Daten in einen neuen DBaaS umziehen um den Speicher wieder zu verringern.
@@ -174,10 +170,10 @@ Derzeit können Sie das Wartungsfenster nicht ändern
 Solange keine Freischaltungen vorgenommen wurden: Niemand
 
 ### Wie kann ich neue Benutzer für meine Datenbankinstanz hinzufügen?
-Wir haben dazu einen kleinen Anleitungsartikel geschrieben: [Anlegen neuer Datenbanken und Benutzer](https://docs.xaas.get-cloud.io/de/docs/01-dbaas/03-howto/anlegen-neuer-datenbanken-und-user/)
+[Anlegen neuer Datenbanken und Benutzer](https://docs.xaas.get-cloud.io/de/docs/01-dbaas/03-howto/anlegen-neuer-datenbanken-und-user/)
 
 ### Kann ich eine Verbindung zu meiner Datenbankinstanz über ein öffentliches Netzwerk herstellen?
-Wir haben dazu einen kleinen Anleitungsartikel geschrieben: [Verbidnung zur Datenbank](https://docs.xaas.get-cloud.io/de/docs/01-dbaas/03-howto/db-login)
+[Verbindung zur Datenbank](https://docs.xaas.get-cloud.io/de/docs/01-dbaas/03-howto/db-login)
 
 ## Fehlersuche
 
@@ -194,5 +190,6 @@ Wenn Ihre Daten beschädigt sind, haben Sie 2 Möglichkeiten:
 ### Zertifizierungen
 ### Sind meine Daten verschlüsselt?
 ### Wie kann ich die Zugriffsrechte auf meine Datenbankinstanz verwalten?
+### Wie kann ich eine andere Nodegröße auswählen?
 
 

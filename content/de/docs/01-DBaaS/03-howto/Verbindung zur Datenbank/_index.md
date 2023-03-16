@@ -1,13 +1,13 @@
 ---
 title: "Zur Datenbank verbinden"
-linkTitle: "db-login"
+linkTitle: "Zur Datenbank verbinden"
 weight: 2
 date: 2023-03-16
 ---
 
 ## MySQL / MariaDB
 
-Benötigte Daten finden Sie im Kundenportal
+Die benötigte Daten finden Sie im Kundenportal wie [hier](https://docs.xaas.get-cloud.io/de/docs/01-dbaas/03-howto/zugangsdaten-ermitteln/) beschrieben.
 
 ```
 bburgschat@NB-63485 ~ % mysql --ssl -h node-64130e880850ca3b9a420bb9.mansvc.psmanaged.com -u kd500789 -p
@@ -42,5 +42,6 @@ bburgschat@NB-63485 ~ %
 ```
 
 ## PostgreSQL
-
-
+```
+Comming Soon
+```
