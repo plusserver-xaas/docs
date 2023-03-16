@@ -7,7 +7,7 @@ date: 2023-03-16
 
 ### Auswahl des Vertrags
 Suchen Sie zunächst den passenden [Vertrag](https://customerservice.plusserver.com/billing/contracts)
-Die Suchbegriffe ==MySQL==, ==PostgreSQL==, ==MariaDB== aber auch ==mansvc== werden ihnen die Auswahl erleichtern.
+Die Suchbegriffe *MySQL*, *PostgreSQL*, *MariaDB* aber auch *mansvc* werden ihnen die Auswahl erleichtern.
 ![Verträge](1-contracts.png)
 
 ### Vertragsdetails anzeigen lassen
@@ -18,7 +18,7 @@ dazu müssen Sie
 auswählen
 
 ### Anmeldedaten
-Sie sehen dann die Zugangsdaten die Sie benötigen um sich mit dem DBaaS zu verbinden.
+Sie sehen dann die Zugangsdaten die Sie benötigen um sich mit der DBaaS zu verbinden.
 ![Zugangsdaten](4-zugangsdaten.png)
-Sie können sich nun mit diesen Daten an ihren DBaaS anmelden. Wenn Sie dazu weitere Unterstützung benötigen schauen Sie bitte in folgende [Anleitung](https://docs.xaas.get-cloud.io/de/docs/01-dbaas/03-howto/db-login)
+Sie können sich nun mit diesen Daten mit der DBaaS verbinden. Wenn Sie dazu weitere Unterstützung benötigen schauen Sie bitte in folgende [Anleitung](https://docs.xaas.get-cloud.io/de/docs/01-dbaas/03-howto/db-login)
 

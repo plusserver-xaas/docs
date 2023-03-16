@@ -73,8 +73,7 @@ Da wir aktuell nur eine Version zur Auswahl stellen gibt es keinen Möglichkeit 
 Pay as you go
 
 ### Wo kann ich meine Rechnungen finden?
-Ihre Rechnung finde Sie im Kundenportal unter ***Verträge und Abrechnungen*** / ***Rechnungen***
-https://customerservice.plusserver.com/billing/invoices
+Ihre Rechnung finde Sie im Kundenportal unter [Verträge und Abrechnungen / Rechnungen](https://customerservice.plusserver.com/billing/invoices)
 
 ### Was ist in den Preisen enthalten?
 * Durch TLS und IP-Zugriffsbeschränkung abgesicherter Zugriff  
@@ -95,7 +94,7 @@ https://customerservice.plusserver.com/billing/invoices
 * Erreichbarkeit der Datenbank ausschließlich über eine Public IP (IPv4)
   * keine VPN Tunnel möglich
   * keine direkte Verbindung zu anderen Produkten
-* Der Zugriff auf den Service ist nur von explizit freigegebenen IPs / IP-Netzen möglich (IP Whitelisting)
+* Der Zugriff zu den DBaaS ist nur von explizit freigegebenen IPs / IP-Netzen möglich (IP Whitelisting)
   * Freizugebende IPs / IP-Netze müssen über Plusserver eingerichtet werden
   * Es dürfen keine Any-Freigaben (Zugriff von 0.0.0.0) erfolgen
   * Freigaben von IP-Netzen dürfen nur im Bereich /24 - /32 (für IPv4) liegen
@@ -107,7 +106,7 @@ https://customerservice.plusserver.com/billing/invoices
 * Die Abrechnung endet mit der vollen Stunde der Kündigung des DBaaS. Diese Stunde wird noch voll abgerechnet.
 
 ### Ist der eingehende und ausgehende Netzwerkverkehr enthalten?
-Jeglicher Traffic von und zu dem Service ist im Preis enthalten
+Jeglicher Traffic von und zu den DBaaS ist im Preis enthalten
 
 ### Wie ist die Verfügbarkeit
 Die Infrastruktur ist vollständig redundant aufgebaut. Wir garantieren daher eine SLA von 99,95.
