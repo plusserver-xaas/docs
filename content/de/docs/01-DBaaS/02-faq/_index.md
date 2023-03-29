@@ -7,18 +7,18 @@ date: 2023-02-21
 
 ## Generelle Fragen
 ### Was sind DBaaS?
-Database as a Service (DBaaS) sind vollständig verwaltete, leistungsstarke Datenbank-Dienste auf Basis der Opensource Datenbanken Mariadb, MySQL oder PostgresSQL. Die Verwendung von voll verwalteten Datenbanken ist eine einfache Alternative zur manuellen Installation, Konfiguration, Wartung und Sicherung von Datenbanken. DBaaS umfasst Monitoring, Entstörung sowie tägliche Backups. DBaaS sind skalierbar und kann so an sich ändernde Leistungsanforderungen angepasst werden. Dazu können die Instanzgrößen (Ram- und CPU Ressourcen) jederzeit angepasst werden, und zwar zu leistungsfähigerer Instanzgrößen, um Performanceengpässe zu überbrücken aber auch in die Gegenrichtung. Der Datenspeicher kann jederzeit in festen 50GB Schritten erhöht werden. Der Zugriff auf die Daten wird durch die Festlegung auf feste, für den Zugriff auf die Datenbank erlaubte IPs und TLS Verschlüsselten Datentransfer abgesichert. Sollte es zu Fehlern kommen kann jederzeit ein Backupstand bereitgestellt werden. Dazu wird ein neuer DBaaS mit den Backupdaten bereitgestellt. Dieser Mechanismus kann auch genutzt werden, um zusätzlich Datenbanken für Test und Entwicklung bereitzustellen.
+Database as a Service (DBaaS) sind vollständig verwaltete, leistungsstarke Datenbank-Dienste auf Basis der Opensource Datenbanken MariaDB, MySQL oder PostgresSQL. Die Verwendung von voll verwalteten Datenbanken ist eine einfache Alternative zur manuellen Installation, Konfiguration, Wartung und Sicherung von Datenbanken. DBaaS umfasst Monitoring, Entstörung sowie tägliche Backups. DBaaS sind skalierbar und können so an sich ändernde Leistungsanforderungen angepasst werden. Dazu können die Instanzgrößen (Ram- und CPU Ressourcen) jederzeit angepasst werden, und zwar zu leistungsfähigerer Instanzgrößen, um Performanceengpässe zu überbrücken aber auch in die Gegenrichtung um kosteneffizient den realen Bedarf abzudecken. Der Datenspeicher kann jederzeit in festen 50GB Schritten erhöht werden. Der Zugriff auf die Daten wird durch die Festlegung auf feste, für den Zugriff auf die Datenbank erlaubte IPs und TLS verschlüsselten Datentransfer abgesichert. Sollte es zu Fehlern innerhalb der Daten kommen kann jederzeit ein Backupstand bereitgestellt werden. Dazu wird eine neue DBaaS-Instanz mit den Backupdaten bereitgestellt. Dieser Mechanismus kann auch genutzt werden, um zusätzlich Datenbanken für Test und Entwicklung bereitzustellen.
 
-### Was sind die unterstützten DBMS?
+### Welche DBMS werden unterstützt?
 * **MariaDB**
 * **MySQL**
 * **PostgreSQL**
 
 ### Kann ich DBaaS mit anderen Plusserver-Produkten verbinden?
-Ja, sofern die Produkte über ein öffentliches Netzwerk erreichen können.
+Ja, sofern die Produkte ein öffentliches Netzwerk erreichen können. Die DBaaS-Instanzen stellen ihren Dienst über eine öffentliche IP bereit.
 
 ### Was ist eine Major- und eine Minorversion?
-Jede Software, auch Datenbanksoftware, bietet neuere Versionen ihres Codes an, die in der Regel Fehlerkorrekturen, Sicherheitsverbesserungen und Verbesserungen enthalten. Im Allgemeinen umfasst ein Minor-Versions-Upgrade nur Änderungen, die mit bestehenden Anwendungen abwärtskompatibel sind. Im Gegensatz dazu kann eine Majorversion Inkompatibilitäten mit sich bringen.
+Jede Software, auch Datenbanksoftware, bietet neuere Versionen ihres Codes an, die in der Regel Fehlerkorrekturen, Sicherheitsverbesserungen und Erweiterungen enthalten. Im Allgemeinen umfasst ein Minor-Versions-Upgrade nur Änderungen, die mit bestehenden Anwendungen abwärtskompatibel sind. Im Gegensatz dazu kann eine Majorversion Inkompatibilitäten mit sich bringen.
 
 ### Was sind Regionen und Availability Zones (AZ)? {#Regions}
 
