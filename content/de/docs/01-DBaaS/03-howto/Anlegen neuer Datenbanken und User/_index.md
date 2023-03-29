@@ -7,9 +7,9 @@ date: 2023-03-13
 
 In diesem Abschnitt erstellen wir eine neue Datenbank mit dem Namen **newdb** und einen Benutzer mit dem Namen **newuser** und gewähren dem entfernten System Zugriff auf die Datenbank newdb mit dem Benutzer newuser.
 
-Melden Sie sich zunächst mit dem folgenden Befehl an der MariaDB-Shell an: 
+Melden Sie sich zunächst mit dem folgenden Befehl an der MariaDB-Shell an, ersetzen sie dabei node-abcd1234567890.mansvc.psmanaged.com und kd123456 mit den Anmeldedaten aus dem Kundenportal: 
 ```
-$ mysql -u admin -p
+$ mysql -u admin -h node-abcd1234567890.mansvc.psmanaged.com -u kd123456 -p
 ```
 Geben Sie Ihr Admin Passwort ein, wie im Kundenportal angezeigt, und erstellen Sie nach der Aufforderung eine Datenbank und einen Benutzer mit dem folgenden Befehl: 
 ```
@@ -17,12 +17,11 @@ MariaDB [(none)]> CREATE DATABASE newdb;
 MariaDB [(none)]> CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
 ```
 
-Als nächstes müssen Sie dem entfernten System mit der IP-Adresse **62.138.222.4** die Berechtigung erteilen, sich mit der Datenbank newdb als Benutzer newuser zu verbinden. Dies können Sie mit dem folgenden Befehl tun:
+Wenn sie dem entfernten Ziel mit der (Beispiel-)IP 62.138.222.4 Zugriff auf diese DB erlauben wollen, müssen Sie dem entfernten System die Berechtigung erteilen, sich mit der Datenbank ***newdb*** als Benutzer ***newuser*** zu verbinden. Dies können Sie mit dem folgenden Befehl tun:
 ```
 MariaDB [(none)]> GRANT ALL ON newdb.* to 'newuser'@'62.138.222.4' IDENTIFIED BY 'password' WITH GRANT OPTION;
 ```
-
-Anschließend löschen Sie die Berechtigungen und verlassen die MariaDB-Shell mit dem folgenden Befehl: 
+Anschließend lesen Sie die Berechtigungen neu ein und verlassen die MariaDB-Shell mit dem folgenden Befehl: 
 ```
 MariaDB [(none)]> FLUSH PRIVILEGES; MariaDB [(none)]> EXIT;
 ```
@@ -38,13 +37,12 @@ Wenn Sie newuser Fernzugriff auf alle Datenbanken gewähren wollen, führen Sie 
 MariaDB [(none)]> GRANT ALL ON *.* to 'newuser'@'62.138.222.4' IDENTIFIED BY 'password' WITH GRANT OPTION;
 ```
 
-Wenn Sie als newuser Zugriff auf alle entfernten IP-Adressen auf newdb gewähren wollen, verwenden Sie **%** anstelle der IP-Adresse (208.117.84.50) wie unten gezeigt: 
+Wenn Sie als ***newuser*** Zugriff auf alle entfernten IP-Adressen auf ***newdb*** gewähren wollen, verwenden Sie **%** anstelle der IP-Adresse (208.117.84.50) wie unten gezeigt: 
 ```
 MariaDB [(none)]> GRANT ALL ON newdb.* to 'newuser'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;
 ```
 
-Wenn Sie auf newdb als Benutzer newuser Zugriff auf alle IP-Adressen im Subnetz **62.138.222.0/24** gewähren wollen, führen Sie folgenden Befehl aus: 
+Wenn Sie auf ***newdb*** als Benutzer ***newuser*** Zugriff auf alle IP-Adressen im Subnetz **62.138.222.0/24** gewähren wollen, führen Sie folgenden Befehl aus: 
 ```
 MariaDB [(none)]> GRANT ALL ON newdb.* to 'newuser'@'62.138.222.%' IDENTIFIED BY 'password' WITH GRANT OPTION;
 ```
-
