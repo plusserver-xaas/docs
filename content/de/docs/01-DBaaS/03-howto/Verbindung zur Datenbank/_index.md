@@ -7,10 +7,10 @@ date: 2023-03-16
 
 ## MySQL / MariaDB
 
-Die benötigte Daten finden Sie im Kundenportal wie [hier](https://docs.xaas.get-cloud.io/de/docs/01-dbaas/03-howto/zugangsdaten-ermitteln/) beschrieben.
+Die benötigte Daten finden Sie im Kundenportal wie [hier](https://docs.xaas.get-cloud.io/docs/01-dbaas/03-howto/zugangsdaten-ermitteln/) beschrieben.
 
 ```
-bburgschat@NB-63485 ~ % mysql --ssl -h node-64130e880850ca3b9a420bb9.mansvc.psmanaged.com -u kd500789 -p
+$ mysql --ssl -h node-64130e880850ca3b9a420bb9.mansvc.psmanaged.com -u kd500789 -p
 Enter password:
 Welcome to the MariaDB monitor.  Commands end with ; or \g.
 Your MariaDB connection id is 42
@@ -33,12 +33,12 @@ MariaDB [(none)]> show DATABASES;
 
 MariaDB [(none)]> use kd500789
 Database changed
+
 MariaDB [kd500789]> show TABLES;
 Empty set (0,095 sec)
 
 MariaDB [kd500789]> quit
 Bye
-bburgschat@NB-63485 ~ %
 ```
 
 ## PostgreSQL
