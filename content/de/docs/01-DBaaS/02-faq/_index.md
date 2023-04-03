@@ -22,7 +22,7 @@ Jede Software, auch Datenbanksoftware, bietet neuere Versionen ihres Codes an, d
 
 ### Was sind Regionen und Availability Zones (AZ)? {#Regions}
 
-PlusServer bietet mehrere Regionen und Verfügbarkeitszonen (AZs), um Kunden Hochverfügbarkeit und Disaster-Recovery-Optionen zu bieten. Jede AZ besteht aus einem oder mehreren Rechenzentren, die so konzipiert sind, dass sie unabhängig voneinander sind und im Falle von Ausfällen oder Katastrophen Redundanz bieten. Kunden können wählen, ob sie ihre Ressourcen in einer oder mehreren AZs für Hochverfügbarkeit und Disaster Recovery einsetzen wollen.
+PlusServer bietet mehrere Regionen und Verfügbarkeitszonen (AZs), um Kunden Hochverfügbarkeit und Disaster-Recovery-Optionen zu bieten. Jede AZ besteht aus einem oder mehreren Rechenzentren, die so konzipiert sind, dass sie unabhängig voneinander sind und im Falle von Ausfällen oder Katastrophen Redundanz bieten. AZs innerhalb einer Regionen bieten den Vorteil einer geringen Netzwerklatenz zwischen ihnen. Kunden können wählen, ob sie ihre Ressourcen in einer oder mehreren AZs für Hochverfügbarkeit und Disaster Recovery einsetzen wollen.
 
 #### Was ist eine Region
 Eine Region ist ein geografisches Gebiet, das aus mehreren isolierten und räumlich getrennten, also redundanten AZs besteht.
@@ -38,7 +38,7 @@ Eine Region ist ein geografisches Gebiet, das aus mehreren isolierten und räuml
 
 #### Was ist eine Availability Zone (AZ)?
 
-Eine Verfügbarkeitszone (AZ) ist ein Standort innerhalb einer Region, der aus einem oder mehreren Rechenzentren besteht, die so konzipiert sind, dass sie voneinander unabhängig sind und im Falle von Ausfällen oder Katastrophen Redundanz bieten. Kunden können ihre Ressourcen in einer oder mehreren AZs für Hochverfügbarkeit und Disaster Recovery bereitstellen.
+Eine Verfügbarkeitszone (AZ) ist ein Standort innerhalb einer Region, der aus einem oder mehreren Rechenzentren besteht, die so konzipiert sind, dass sie voneinander unabhängig sind und im Falle von Ausfällen oder Katastrophen Redundanz bieten. AZs innerhalb einer Regionen bieten den Vorteil einer geringen Netzwerklatenz zwischen ihnen. Kunden können ihre Ressourcen in einer oder mehreren AZs für Hochverfügbarkeit und Disaster Recovery bereitstellen.
 
 ##### Anforderungen
 
@@ -66,7 +66,7 @@ In der folgenden Tabelle sind die vom PlusServer angebotenen Regionen und AZs au
 Aktuell bieten wir nur je eine Version je DBaaS. Wir planen weitere Versionen jeder DBaaS zur Auswahl zu stellen.
 
 ### Kann ich eine neue Version vor dem Upgrade testen?
-Da wir aktuell nur eine Version zur Auswahl stellen gibt es keinen Möglichkeit zum Upgrade und zum Test des Upgradesc
+Da wir aktuell nur eine Version zur Auswahl stellen gibt es keinen Möglichkeit zum Upgrade und zum Test des Upgrades.
 
 ## Abrechnung
 ### Wie werden die Dienste abgerechnet?
@@ -76,7 +76,7 @@ Pay as you go
 Ihre Rechnung finde Sie im Kundenportal unter [Verträge und Abrechnungen / Rechnungen](https://customerservice.plusserver.com/billing/invoices)
 
 ### Was ist in den Preisen enthalten?
-* Durch TLS und IP-Zugriffsbeschränkung abgesicherter Zugriff  
+* Abgesicherter Zugriff durch TLS und konfigurierbarer IP-Zugriffsbeschränkungen
 * Buchung und Skalierung direkt über das Kundenportal
 * Abrechnung nach "Pay as you go"
 * Plusserver stellt die passende Infrastruktur bereit
@@ -102,8 +102,8 @@ Ihre Rechnung finde Sie im Kundenportal unter [Verträge und Abrechnungen / Rech
 
 ### Wann beginnt und endet die Abrechnung?
 * Die Abrechnung erfolgt je voller Stunde
-* Die Abrechnung startet mit der nächsten vollen Stunde nach erfolgreicher Bereitstellung des DBaaS.
-* Die Abrechnung endet mit der vollen Stunde der Kündigung des DBaaS. Diese Stunde wird noch voll abgerechnet.
+* Die Abrechnung startet mit der nächsten vollen Stunde nach erfolgreicher Bereitstellung des DBaaS
+* Die Abrechnung endet mit der vollen Stunde der Kündigung des DBaaS. Diese Stunde wird noch voll abgerechnet
 
 ### Ist der eingehende und ausgehende Netzwerkverkehr enthalten?
 Jeglicher Traffic von und zu den DBaaS ist im Preis enthalten
@@ -119,17 +119,17 @@ Aktuell gibt es keine Limitierung
 Wir haben für Sie eine [Schnellstartanleitung](https://docs.xaas.get-cloud.io/de/docs/01-dbaas/01-quickstart/) erstellt 
 
 ### Wie kann ich Daten in eine DB-Instanz importieren?
-Wir verwenden offizielle Versionen der DBMS, so dass Sie sich auf die offizielle Dokumentation für jedes DBMS verlassen können, um Daten in DBaaS zu importieren. Für PostgreSQL können Sie zum Beispiel pg_dump und pg_restore verwenden, für MySQL oder MariaDB mysqldump und mysqlimport.
+Wir verwenden offizielle Versionen der DBMS, so dass Sie sich auf die offizielle Dokumentation für jedes DBMS verlassen können, um Daten in DBaaS zu importieren. Für PostgreSQL können Sie zum Beispiel ```pg_dump``` und ```pg_restore``` verwenden, für MySQL oder MariaDB ```mysqldump``` und ```mysqlimport```.
 
 ## Skalierung
 
 ### Kann ich den Datenspeicher verkleinern?
-Nein, eine Reduzierung des genutzten Speichers ist nicht vorgesehen. Sie können hier mit Export/Import die Daten in einen neuen DBaaS umziehen um den Speicher wieder zu verringern.
+Nein, eine Reduzierung des genutzten Speichers ist nicht vorgesehen. Sie können hier mit Export/Import die Daten in einen neuen DBaaS mit kleinerem Datenspeicher umziehen und den alten DBaaS kündigen um den Speicher wieder zu verringern.
 
 ### Wird meine DB-Instanz während der Skalierung verfügbar bleiben?
-#### Nodesize
+#### Skalierung der Nodesize
 Hier wird es eine kurze Unterbrechung geben, da die Node mit angepassten Ressourcen neu ausgerollt wird. 
-#### Speicherplatz
+#### Skalierung des Speicherplatzes
 Der Datenspeicher wir ohne Unterbrechnung erweitert
 
 ### Wie ist die Leistung der einzelnen Nodegrößen?
@@ -142,17 +142,17 @@ Das hängt von der Auswahl der Region ab, die Sie ausgewählt haben. Weiter Info
 Bislang bieten wir keine Multi-AZ-Bereitstellungen an. Sie bekommen die DBaaS in jeweils einer Region bzw einem AZ bereitgestellt.
 
 ## Backups und Wartung
-### Wie führen Sie Backups durch?
+### Führen Sie Backups durch?
 Ja, wir erstellen ein tägliches Backup der Daten
 
 ### Kann ich manuelle Backups durchführen?
-Wir verwenden offizielle Versionen von DBMS, so dass Sie sich auf die offizielle Dokumentation für jedes DBMS verlassen können, um Backups für Public Cloud-Datenbanken durchzuführen. Für PostgreSQL können Sie zum Beispiel pg_dump und pg_restore verwenden. Für MySQL können Sie mysqldump und mysqlimport verwenden.
+Wir verwenden offizielle Versionen von DBMS, so dass Sie sich auf die offizielle Dokumentation für jedes DBMS verlassen können, um Backups für Public Cloud-Datenbanken durchzuführen. Für PostgreSQL können Sie zum Beispiel ```pg_dump``` und für MySQL ```mysqldump``` verwenden um einen vollständigen Auszug ihrer Daten und der Datenbankstruktur zu exportieren.
 
 ### Kann ich die von Plusserver erstellten Backups direkt herunterladen?
 Nein, Sie können die von Plusserver erstellten Backups nicht direkt herunterladen.
 
 ### Wo werden meine Backups gespeichert, und wie lange?
-Die Backupdaten werden auf ein abgesichertes S3 Storage ausgelagert und dort 7 Tage vorgehalten
+Die Backupdaten werden auf einen abgesichertes S3 Storage ausgelagert und dort 7 Tage vorgehalten
  
 ### Was ist ein Wartungsfenster? Wird meine DB-Instanz während der Wartungsarbeiten verfügbar sein?
 Die Backups werden ab 22:00 erstellt. Wir erstellen die Backups auf Snapshotbasis. Die Datenbank bleibt daher grundsätzlich verfügbar, wird aber für einen kurzen Moment in einen konsistenten Zustand gebracht (Read only).
