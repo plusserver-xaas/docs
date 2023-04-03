@@ -116,10 +116,10 @@ Die Infrastruktur ist vollständig redundant aufgebaut. Wir garantieren daher ei
 Aktuell gibt es keine Limitierung
 
 ### Wie fange ich an?
-Wir haben für Sie eine [Schnellstartanleitung](https://docs.xaas.get-cloud.io/de/docs/01-dbaas/01-quickstart/) erstellt 
+Wir haben für Sie eine [Schnellstartanleitung](https://docs.xaas.get-cloud.io/docs/01-dbaas/01-quickstart/) erstellt 
 
 ### Wie kann ich Daten in eine DB-Instanz importieren?
-Wir verwenden offizielle Versionen der DBMS, so dass Sie sich auf die offizielle Dokumentation für jedes DBMS verlassen können, um Daten in DBaaS zu importieren. Für PostgreSQL können Sie zum Beispiel ```pg_dump``` und ```pg_restore``` verwenden, für MySQL oder MariaDB ```mysqldump``` und ```mysqlimport```.
+Wir verwenden offizielle Versionen der DBMS, so dass Sie sich auf die offizielle Dokumentation für jedes DBMS verlassen können, um Daten in DBaaS zu importieren. Für PostgreSQL können Sie zum Beispiel ```pg_restore``` und für MySQL oder MariaDB ```mysqlimport``` verwenden.
 
 ## Skalierung
 
@@ -158,21 +158,21 @@ Die Backupdaten werden auf einen abgesichertes S3 Storage ausgelagert und dort 7
 Die Backups werden ab 22:00 erstellt. Wir erstellen die Backups auf Snapshotbasis. Die Datenbank bleibt daher grundsätzlich verfügbar, wird aber für einen kurzen Moment in einen konsistenten Zustand gebracht (Read only).
  
 ### Kann ich das Wartungsfenster ändern?
-Derzeit können Sie das Wartungsfenster nicht ändern
+Derzeit können Sie das Wartungsfenster nicht anpassen.
 
 ## Sicherheit
 ### Welche Sicherheitsmechanismen gibt es für meine Datenbankinstanz?
 * Die Datenbank kann nur nach expliziter Freischaltung von berechtigten IPs oder IP-Bereichen genutzt werden. Wir empehlen dies so stark wie möglich einzugrenzen
-* Sie können ausschließlich SSL verschlüsselt mit der Datenbank verbinden  
+* Sie können sich ausschließlich TLS verschlüsselt mit der Datenbank verbinden  
 
 ### Wer kann anfangs auf meine Datenbankinstanz zugreifen?
 Solange keine Freischaltungen vorgenommen wurden: Niemand
 
 ### Wie kann ich neue Benutzer für meine Datenbankinstanz hinzufügen?
-[Anlegen neuer Datenbanken und Benutzer](https://docs.xaas.get-cloud.io/de/docs/01-dbaas/03-howto/anlegen-neuer-datenbanken-und-user/)
+[Anlegen neuer Datenbanken und Benutzer](https://docs.xaas.get-cloud.io/docs/01-dbaas/03-howto/anlegen-neuer-datenbanken-und-user/)
 
 ### Kann ich eine Verbindung zu meiner Datenbankinstanz über ein öffentliches Netzwerk herstellen?
-[Verbindung zur Datenbank](https://docs.xaas.get-cloud.io/de/docs/01-dbaas/03-howto/db-login)
+[Verbindung zur Datenbank](https://docs.xaas.get-cloud.io/docs/01-dbaas/03-howto/verbindung-zur-datenbank/)
 
 ## Fehlersuche
 
@@ -180,7 +180,7 @@ Solange keine Freischaltungen vorgenommen wurden: Niemand
 Wenn Ihre Daten beschädigt sind, haben Sie 2 Möglichkeiten:
 
 1. Wenn Ihre Daten wichtig sind, können Sie eine Sicherungskopie wiederherstellen, auf der Ihre Daten noch gültig sind. Für diesen Schritt müssen Sie selbst Nachforschungen anstellen.
-2. Wenn Ihre Daten gelöscht werden können, können Sie den Datenbankinstanzdienst löschen und einen neuen erstellen oder einfach der offiziellen DBMS-Dokumentation folgen, um alle Daten zu löschen.
+2. Wenn Ihre Daten gelöscht werden können, können Sie den DBaaS kündigen und einen neuen beauftragen oder einfach der offiziellen DBMS-Dokumentation folgen, um alle Daten zu löschen.
 
 
 ## Themenspeicher
