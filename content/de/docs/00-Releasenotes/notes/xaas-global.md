@@ -1,5 +1,5 @@
 ---
-title: "Release notes"
+title: "Release notes XaaS Platform"
 linkTitle: "XaaS Platform"
 date: 2023-06-13
 weight: 10

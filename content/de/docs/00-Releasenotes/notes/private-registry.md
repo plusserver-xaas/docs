@@ -1,5 +1,5 @@
 ---
-title: "Release notes"
+title: "Release notes Private Registry"
 linkTitle: "Private Registry"
 date: 2023-06-13
 weight: 30

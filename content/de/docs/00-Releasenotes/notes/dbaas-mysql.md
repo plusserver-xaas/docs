@@ -1,5 +1,5 @@
 ---
-title: "Release notes"
+title: "Release notes DBaaS Mysql"
 linkTitle: "DBaaS Mysql"
 date: 2023-06-13
 weight: 20
