@@ -2,7 +2,7 @@
 title: "Release notes"
 linkTitle: "DBaaS Mysql"
 date: 2023-06-13
-weight: 998
+weight: 20
 description: >
 
 ---
