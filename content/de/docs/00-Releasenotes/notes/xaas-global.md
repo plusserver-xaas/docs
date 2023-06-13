@@ -1,6 +1,6 @@
 ---
-title: "xaas platform release notes"
-linkTitle: "xaas-platform-release-notes"
+title: "xaas platform"
+linkTitle: "xaas platform"
 date: 2023-06-13
 weight: 998
 description: >
@@ -14,14 +14,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Kubernetes based services
-- RO-Replica customer
-- Instanz parameter customer customizable
-- Service parameter customer customizable
 
 ## [2.0.0] - 2023-05-25 
 ### Added
-- 2 AZ
-- RO-Replica
+- Multi AZ support (starting with 2 AZ)
+- Support for multinode services
 - Instanz parameter customizable
 - Service parameter customizable
 
