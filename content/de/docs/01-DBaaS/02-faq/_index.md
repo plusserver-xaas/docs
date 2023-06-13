@@ -4,7 +4,7 @@ linkTitle: "FAQ"
 weight: 10
 date: 2023-02-21
 ---
-
+# 2
 ## Generelle Fragen
 ### Was sind DBaaS?
 Database as a Service (DBaaS) sind vollständig verwaltete, leistungsstarke Datenbank-Dienste auf Basis der Opensource Datenbanken Mariadb, MySQL oder PostgresSQL. Die Verwendung von voll verwalteten Datenbanken ist eine einfache Alternative zur manuellen Installation, Konfiguration, Wartung und Sicherung von Datenbanken. DBaaS umfasst Monitoring, Entstörung sowie tägliche Backups. DBaaS sind skalierbar und kann so an sich ändernde Leistungsanforderungen angepasst werden. Dazu können die Instanzgrößen (Ram- und CPU Ressourcen) jederzeit angepasst werden, und zwar zu leistungsfähigerer Instanzgrößen, um Performanceengpässe zu überbrücken aber auch in die Gegenrichtung. Der Datenspeicher kann jederzeit in festen 50GB Schritten erhöht werden. Der Zugriff auf die Daten wird durch die Festlegung auf feste, für den Zugriff auf die Datenbank erlaubte IPs und TLS Verschlüsselten Datentransfer abgesichert. Sollte es zu Fehlern kommen kann jederzeit ein Backupstand bereitgestellt werden. Dazu wird ein neuer DBaaS mit den Backupdaten bereitgestellt. Dieser Mechanismus kann auch genutzt werden, um zusätzlich Datenbanken für Test und Entwicklung bereitzustellen.
