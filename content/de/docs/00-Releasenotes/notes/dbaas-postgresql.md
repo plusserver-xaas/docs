@@ -2,7 +2,7 @@
 title: "Release notes"
 linkTitle: "DBaaS PostgreSQL"
 date: 2023-06-13
-weight: 998
+weight: 20
 description: >
 
 ---

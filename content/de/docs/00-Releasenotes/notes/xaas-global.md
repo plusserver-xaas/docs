@@ -1,8 +1,8 @@
 ---
-title: "xaas platform"
+title: "Release notes"
 linkTitle: "xaas platform"
 date: 2023-06-13
-weight: 998
+weight: 30
 description: >
 
 ---
