@@ -163,7 +163,7 @@ Derzeit können Sie das Wartungsfenster nicht anpassen.
 ## Sicherheit
 ### Welche Sicherheitsmechanismen gibt es für meine Datenbankinstanz?
 * Die Datenbank kann nur nach expliziter Freischaltung von berechtigten IPs oder IP-Bereichen genutzt werden. Wir empehlen dies so stark wie möglich einzugrenzen
-* Sie können sich ausschließlich TLS verschlüsselt mit der Datenbank verbinden  
+* Sie können sich ausschließlich TLS verschlüsselt mit der Datenbank verbinden
 
 ### Wer kann anfangs auf meine Datenbankinstanz zugreifen?
 Solange keine Freischaltungen vorgenommen wurden: Niemand
@@ -174,6 +174,9 @@ Solange keine Freischaltungen vorgenommen wurden: Niemand
 ### Kann ich eine Verbindung zu meiner Datenbankinstanz über ein öffentliches Netzwerk herstellen?
 [Verbindung zur Datenbank](https://docs.xaas.get-cloud.io/docs/01-dbaas/03-howto/verbindung-zur-datenbank/)
 
+### Ist der Datentransfer verschlüsselt
+Ja, jegliche Kommunikation mit dem Service (API, SQL-Client, GUI) erfolt verschlüsselt. Wir erzeugen dafür Let's Encrypt Zertifikate.
+
 ## Fehlersuche
 
 ### Meine Daten sind beschädigt
@@ -181,6 +184,12 @@ Wenn Ihre Daten beschädigt sind, haben Sie 2 Möglichkeiten:
 
 1. Wenn Ihre Daten wichtig sind, können Sie eine Sicherungskopie wiederherstellen, auf der Ihre Daten noch gültig sind. Für diesen Schritt müssen Sie selbst Nachforschungen anstellen.
 2. Wenn Ihre Daten gelöscht werden können, können Sie den DBaaS kündigen und einen neuen beauftragen oder einfach der offiziellen DBMS-Dokumentation folgen, um alle Daten zu löschen.
+
+### Ich erhalte Zertifikatswarnungen, wenn ich auf den Dienst zugreifen möchte
+Wir verwenden Let's Encrypt Zertifikate. Bitte prüfen Sie, ob die erforderlichen (Zwischen-)Zertifikate auf dem zugreifenden System vorhanden sind. [Let's Encrypt Zertifikate](https://letsencrypt.org/certificates/)
+
+### Der verschlüsselte Zugriff auf den Service funktioniert nicht
+Einige API- und auf SQL-Clients haben einen Schalter für SSL. Bitte prüfen Sie ob Sie eine Option für die verschlüsselte Kommunikation aktivieren müssen
 
 
 ## Themenspeicher
