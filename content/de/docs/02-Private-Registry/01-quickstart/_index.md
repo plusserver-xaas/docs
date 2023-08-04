@@ -34,7 +34,7 @@ Sie müssen hier den Zugriff von einer oder mehrer externen Adressen oder Adress
 Sie können hier auswählen in welcher [Region](https://docs.xaas.get-cloud.io/docs/01-dbaas/02-faq/#Regions) der Service bereitgestellt werden soll. 
 
 ### Auswahl des Rechnungsprofils
-Sie sind neuer Kunde bei Plusserver und bekommen noch keine Rechnung? Dann wählen Sie ***Neues Rechnungsprofil***. Sind Sie bereits Kunde: Dann können Sie aus bereits bestehenden Rechnungsprofilen wählen und bekommen den neuen DBaaS mit auf eine bestehende Rechnung, diese müssen Sie dann auswählen. 
+Sie sind neuer Kunde bei Plusserver und bekommen noch keine Rechnung? Dann wählen Sie ***Neues Rechnungsprofil***. Sind Sie bereits Kunde: Dann können Sie aus bereits bestehenden Rechnungsprofilen wählen und bekommen de neue private Registry mit auf eine bestehende Rechnung, diese müssen Sie dann auswählen. 
 ![Auswahl Rechnungsprofil](8-rechnungsprofil.png)
 
 ### Auslösen der Bestellung
